@@ -31,7 +31,7 @@ Para o projeto funcionar corretamente você deve instalar:  REACT-LEAFLET, LEAFL
 
 <h4>➡️Para Funcionar Precisa</h4>
 
-* `npx start` -> Para iniciar a Página.
+* `npm start` -> Para iniciar a Página.
 
 
 
