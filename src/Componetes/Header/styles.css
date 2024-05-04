@@ -1,0 +1,33 @@
+.header {
+    background-image: radial-gradient(circle at 12.5% 12.5%, #e99f38 0, #ef9437 8.33%, #f38838 16.67%, #f77b3a 25%, #f96c3d 33.33%, #fa5b41 41.67%, #f94646 50%, #f72c4c 58.33%, #f40054 66.67%, #f0005e 75%, #ea0069 83.33%, #e30076 91.67%, #da0083 100%);
+    color: #fff;
+    display: flex;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    flex-direction: row;
+    justify-content:space-between;
+  }
+  
+  .header h1 {
+    margin-top: 10px;
+  }
+  
+  .header nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .header nav ul li {
+    display: inline;
+    margin-right: 20px;
+    font-size:20px;
+  }
+  
+  .header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .header nav ul li a:hover {
+    text-decoration: underline;
+  }

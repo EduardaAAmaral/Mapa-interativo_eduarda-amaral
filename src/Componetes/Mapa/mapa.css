@@ -1,0 +1,40 @@
+*element.styles{
+    height: 100vh;
+}
+
+.leaflet-container{
+    width: 80vw;
+    border-radius: 15px;
+    border: 2px solid rgb(93, 93, 93);
+    box-sizing: border-box;
+}
+
+.central{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    height: 80vh;
+    padding: 20px;
+}
+
+.popup-buttons {
+    position: absolute;
+    bottom: 0px;
+    z-index: 100;
+}
+
+.popup-buttons button {
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 7.5px;
+}
+
+.popup-buttons button:hover {
+    background-color: #cc0000;
+}
+

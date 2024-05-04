@@ -1,47 +1,70 @@
-# desafio-siapesq-estagio-2024-1
+# Getting Started with Create React App
 
-Prazo: 2 semanas
-## Frontend
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Desenvolva uma aplicação web utilizando React e Leaflet que exiba um mapa interativo com marcadores de diferentes locais. Cada marcador deve exibir um popup contendo informações sobre o local, como nome, descrição e as coordenadas.
+## Available Scripts
 
-### Requisitos:
+In the project directory, you can run:
 
-* A aplicação deve ser desenvolvida utilizando React e Leaflet.
-* É necessário ter uma tela para cadastrar usuário e uma tela de login
-* O mapa só pode ser acessado aṕos o usuario fazer o login
-* O mapa deve ser centrado em uma localização inicial específica (Rio Grande)
-* Deve ser possivel adicionar e excluir um local
-* Ao clicar em um marcador, um popup deve ser exibido contendo informações sobre o local correspondente.
-* O código deve ser organizado e limpo, seguindo as boas práticas de desenvolvimento.
+### `npm start`
 
-## Backend 
-  Desenvolva uma REST API em nodejs ou python que sirva os casos de uso da aplicação frontend
-### Requisitos:
-* Endpoints:
-  * Para cadastro de usuários(nome,email,senha)
-  * Para realizar login
-  * Utilize JWT para bloquear usuários não logados de acessarem as rotas protegidas
-  * **Rotas Protegidas por Token**:
-    * Para cadastro de local(nome,descrição,latitude,longitude)
-    * Para deletar local
-    * Para listar locais
-  * Utilize um banco de dados relacional(postgresql,mysql,etc)
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### Entrega
-* Faça uma fork desse projeto e criei uma branch com o seu nome e sobrenome(exemplo: patrick-souza)
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-* **Lembre-se de colocar um readme.md explicando como rodar o projeto** 
+### `npm test`
 
-* Siga o padrão do [**EXEMPLO**](https://github.com/PatrickFS18/desafio-siapesq-estagio-2024-1)
-  
-### Dúvidas
-Em caso de dúvida abra um issue no repositório do desafio e atribuia a @chipskein e/ou @PatrickFS18
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-[exemplo-de-duvida](https://github.com/siapesq/desafio-siapesq-estagio-2024-1/issues/2)
+### `npm run build`
 
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+### `npm run eject`
 
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -1,0 +1,7 @@
+.footer {
+  background-image: radial-gradient(circle at 12.5% 12.5%, #e99f38 0, #ef9437 8.33%, #f38838 16.67%, #f77b3a 25%, #f96c3d 33.33%, #fa5b41 41.67%, #f94646 50%, #f72c4c 58.33%, #f40054 66.67%, #f0005e 75%, #ea0069 83.33%, #e30076 91.67%, #da0083 100%);
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    margin-top: 4.1rem;
+  }
