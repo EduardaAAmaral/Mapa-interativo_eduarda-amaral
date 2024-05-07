@@ -20,17 +20,18 @@
 
 <h2 align="letf">✍️ Observação para Utilização </h2>
 
-Para o projeto funcionar corretamente você deve instalar:  REACT-LEAFLET, LEAFLET, REACT-ROUTER-DOM
+Para o projeto funcionar corretamente você deve instalar:  REACT-LEAFLET, LEAFLET, REACT-LEAFLET-CLUSTER, REACT-ROUTER-DOM
 
 <h4>➡️Instalando</h4>
 
 * `npm install leaflet` -> Para instalar o pacote Leaflet.
-* `npm install react-leaflet` -> Para instalae o pacote react-leaflet.
-* `npm install react-leaflet-cluster` -> Para instalae o pacote react-leaflet-cluster.
+* `npm install react-leaflet` -> Para instalar o pacote react-leaflet.
+* `npm install react-leaflet-cluster` -> Para instalar o pacote react-leaflet-cluster.
+* `npm install react-router-dom` -> Para instalar o pacote react-router-dom.
 
 <h4>➡️Para Funcionar Precisa</h4>
 
-* `npx start` -> Para iniciar a Página.
+* `npm start` -> Para iniciar a Página.
 
 
 
