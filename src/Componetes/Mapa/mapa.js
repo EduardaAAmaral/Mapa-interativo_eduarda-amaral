@@ -11,12 +11,12 @@ function Mapa() {
   const [markers, setMarkers] = useState([]);
   const [selectedMarker, setSelectedMarker] = useState(null);
 
-  const customIcon = new Icon({
+  const icone = new Icon({
     iconUrl: imagem,
     iconSize: [38, 38]
   });
 
-  const createCustomClusterIcon = function (cluster) {
+  const criar_icone = function (cluster) {
     return new divIcon({
       html: `<span class="cluster-icon">${cluster.getChildCount()}</span>`,
       className: "custom-marker-cluster",
@@ -24,7 +24,7 @@ function Mapa() {
     });
   };
 
-  const handleAddMarker = (place, latlng) => {
+  const adicionar_marcador = (place, latlng) => {
     const newMarker = {
       id: Date.now(),
       position: latlng,
@@ -33,16 +33,16 @@ function Mapa() {
     setMarkers(prevMarkers => [...prevMarkers, newMarker]);
   };
 
-  const handleRemoveMarker = (id) => {
+  const remover_icone = (id) => {
     setMarkers(prevMarkers => prevMarkers.filter(marker => marker.id !== id));
     setSelectedMarker(null);
   };
 
-  const openPopup = (marker) => {
+  const abrir_popup = (marker) => {
     setSelectedMarker(marker);
   };
 
-  const closePopup = () => {
+  const fechar_popup = () => {
     setSelectedMarker(null);
   };
 
@@ -53,12 +53,12 @@ function Mapa() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <MapClickHandler handleAddMarker={handleAddMarker} />
-        <MarkerClusterGroup chunkedLoading iconCreateFunction={createCustomClusterIcon}>
+        <MapClickHandler adicionar_marcador={adicionar_marcador} />
+        <MarkerClusterGroup chunkedLoading iconCreateFunction={criar_icone}>
           {markers.map(marker => (
-            <Marker key={marker.id} position={marker.position} icon={customIcon} eventHandlers={{ click: () => openPopup(marker) }}>
+            <Marker key={marker.id} position={marker.position} icon={icone} eventHandlers={{ click: () => abrir_popup(marker) }}>
               {selectedMarker && selectedMarker.id === marker.id && (
-                <Popup position={marker.position} onClose={closePopup}>
+                <Popup position={marker.position} onClose={fechar_popup}>
                   {marker.popUp}
                 </Popup>
               )}
@@ -68,14 +68,14 @@ function Mapa() {
       </MapContainer>
       {selectedMarker && (
         <div className="popup-buttons">
-          <button onClick={() => handleRemoveMarker(selectedMarker.id)}>Excluir Marcador</button>
+          <button onClick={() => remover_icone(selectedMarker.id)}>Excluir Marcador</button>
         </div>
       )}
     </div>
   );
 }
 
-function MapClickHandler({ handleAddMarker }) {
+function MapClickHandler({ adicionar_marcador }) {
   // eslint-disable-next-line
   const map = useMapEvents({
     click: async (e) => {
@@ -84,10 +84,10 @@ function MapClickHandler({ handleAddMarker }) {
         const response = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}`);
         const data = await response.json();
         const placeName = data.display_name;
-        handleAddMarker(placeName, e.latlng);
+        adicionar_marcador(placeName, e.latlng);
       } catch (error) {
         console.error("Erro ao buscar nome do lugar:", error);
-        handleAddMarker("Marcador", e.latlng);
+        adicionar_marcador("Marcador", e.latlng);
       }
     }
   });
